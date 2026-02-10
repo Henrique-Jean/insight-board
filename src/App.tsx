@@ -1,26 +1,57 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {DashboardLayout} from './layouts/DashboardLayout';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { DashboardLayout } from './layouts/DashboardLayout';
+import { Statcard } from './components/StatCard';
+import { statsData } from './data/mockData';
 
+// 1. Definição da Página de Visão Geral (Overview)
 const OverviewPage = () => (
-  <div>
-    <h1 className="text-2xl font-bold text-slate-800 mb-4">Overview Dashboard</h1>
-    <div className="grid grid-cols-3 gap-4">
-      <div className="h-32 bg-white rounded-xl border border-slate-200 p-4 shadow-sm">Card 1</div>
-      <div className="h-32 bg-white rounded-xl border border-slate-200 p-4 shadow-sm">Card 2</div>
-      <div className="h-32 bg-white rounded-xl border border-slate-200 p-4 shadow-sm">Card 3</div>
+  <div className="space-y-6">
+    <h1 className="text-3xl font-bold text-slate-800">Dashboard Overview</h1>
+    
+   
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      {statsData.map((stat, index) => (
+        <Statcard 
+          key={index}
+          title={stat.title}
+          value={stat.value}
+          change={stat.change}
+          isPositive={stat.isPositive}
+          icon={stat.icon}
+        />
+      ))}
+    </div>
+
+ 
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
+      <div className="col-span-4 bg-white p-6 rounded-xl border border-slate-200 h-[400px]">
+        <h3 className="font-semibold text-slate-800 mb-4">Revenue over time</h3>
+        <div className="flex items-center justify-center h-full text-slate-400 bg-slate-50 rounded-lg">
+          Gráfico vai aqui (Próximo Passo)
+        </div>
+      </div>
+      <div className="col-span-3 bg-white p-6 rounded-xl border border-slate-200 h-[400px]">
+        <h3 className="font-semibold text-slate-800 mb-4">Recent Sales</h3>
+        <div className="flex items-center justify-center h-full text-slate-400 bg-slate-50 rounded-lg">
+          Lista vai aqui
+        </div>
+      </div>
     </div>
   </div>
 );
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<DashboardLayout />}>
+        
           <Route index element={<OverviewPage />} />
-          <Route path="sales" element={<div>Sales Page</div>} />
-          <Route path="users" element={<div>Users Page</div>} />
-          <Route path="settings" element={<div>Settings page</div>} />
+          
+          <Route path="sales" element={<div>Sales Page (Em breve)</div>} />
+          <Route path="users" element={<div>Users Page (Em breve)</div>} />
+          <Route path="settings" element={<div>Settings Page (Em breve)</div>} />
         </Route>
       </Routes>
     </BrowserRouter>
