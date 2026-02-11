@@ -6,6 +6,7 @@ import { OverviewChart } from './components/OverviewChart';
 import { RecentSales } from './components/RecentSales';
 import { UsersPage } from './pages/UsersPage';
 import { SalesPage } from './pages/SalesPage';
+import { SettingsPage } from './pages/SettingsPage';
 
 // 1. Definição da Página de Visão Geral (Overview)
 const OverviewPage = () => (
@@ -62,7 +63,7 @@ function App() {
           
           <Route path="sales" element={<SalesPage />} />
           <Route path="users" element={<UsersPage />} />
-          <Route path="settings" element={<div>Settings Page (Em breve)</div>} />
+          <Route path="settings" element={<SettingsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
