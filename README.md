@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# InsightBoard - Enterprise React Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project Banner](https://via.placeholder.com/1200x600?text=Dashboard+Preview+Here)
+## 🚀 Live Demo
+👉 **[Click here to view the live application](https://project-flowdesk.vercel.app/)**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 Project Overview
 
-## React Compiler
+**InsightBoard** is a modern, responsive Admin Dashboard built to demonstrate **advanced Front-end Engineering skills**. 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The goal of this project was to build a scalable UI architecture using **React** and **TypeScript**, focusing on reusable components, strict type safety, and a seamless user experience across devices. It simulates a real-world SaaS environment with data visualization, list management, and user preferences.
 
-## Expanding the ESLint configuration
+### ✨ Key Technical Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **⚛️ Component-Driven Architecture:** Built with atomic, reusable components (e.g., `StatCard`, `StatusBadge`, `Switch`) to ensure consistency and maintainability.
+- **🛡️ Strict TypeScript:** Full type safety for all data interfaces (Users, Sales, Transactions) to prevent runtime errors and improve developer experience.
+- **📊 Dynamic Data Visualization:** Integration of `Recharts` for performant, responsive charts (Area & Bar) with custom tooltips and gradients.
+- **📱 Responsive Design:** Mobile-first approach using **Tailwind CSS**, ensuring a fluid layout from mobile phones to large desktop screens.
+- **⚡ Efficient State Management:** Handling complex form states and UI toggles (Settings Page) with React Hooks.
+- **🧩 Clean Routing:** Implementation of `React Router v6` with nested routes for a structured application flow.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project leverages the modern React ecosystem:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+| Category | Technology |
+|----------|------------|
+| **Core** | [React 18](https://reactjs.org/) (via Vite) |
+| **Language** | [TypeScript](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) |
+| **Routing** | [React Router DOM](https://reactrouter.com/) |
+| **Charts** | [Recharts](https://recharts.org/) |
+| **Icons** | [Lucide React](https://lucide.dev/) |
+| **CI/CD** | Vercel |
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📸 Application Preview
+
+| **Dashboard Overview** | **Analytics Module** |
+|:---:|:---:|
+| ![Overview](https://github.com/user-attachments/assets/15c49192-4aa3-4cb5-98c2-e0d965bf8d25) | ![Sales](https://github.com/user-attachments/assets/9dfd33cd-bceb-4b2c-af62-edb255619130) |
+| *Real-time data visualization with responsive grids* | *Complex financial data tables and bar charts* |
+
+| **User Management** | **Settings & Preferences** |
+|:---:|:---:|
+| ![Users](https://github.com/user-attachments/assets/dee8afa7-5392-449e-a164-0ab7607a015e) | ![Settings](https://github.com/user-attachments/assets/6c39e404-c0da-40e6-a1bd-08f17f2a1980) |
+| *Data tables with status badges and pagination logic* | *Form handling with custom UI toggles* |
+
+---
+
+## 💻 Running Locally
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) installed.
+
+```bash
+# 1. Clone the repository
+git clone [https://github.com/Henrique-Jean/insight-board.git](https://github.com/Henrique-Jean/insight-board.git)
+
+# 2. Go into the repository
+cd insight-board
+
+# 3. Install dependencies
+npm install
+
+npm run dev
+👤 Author
+Developed by Henrique Jean.
