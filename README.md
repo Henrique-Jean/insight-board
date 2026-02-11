@@ -2,7 +2,7 @@
 
 ![Project Banner](https://via.placeholder.com/1200x600?text=Dashboard+Preview+Here)
 ## 🚀 Live Demo
-👉 **[Click here to view the live application](https://project-flowdesk.vercel.app/)**
+👉 **[Click here to view the live application](https://insight-board-two.vercel.app/)**
 
 ---
 
